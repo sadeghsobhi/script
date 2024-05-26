@@ -45,7 +45,7 @@ for KEYSPACEFULL in $BD_DIR/*; do
                 tar czfP $File_tar/$BackupDirectory"_"$SNAPSHOT.tar.gz $DIR/$SNAPSHOT
 		echo "Tar Files Created Successfully."
                 #cpToCeph="aws --endpoint=http://172.16.0.0 s3 cp $File_tar/$BackupDirectory"_"$SNAPSHOT.tar.gz $BACKUP_DIR"
-		#cpToCeph="//172.16.0.12/Backup-Data/Projectname /home/sobhi-s/cassandra/tar  cifs dir_mode=0755,file_mode=0755,uid=10001,username=test,password=test  0  0"
+		#cpToCeph="//172.16.0.12/Backup-Data/Projectname /home/ubuntu/cassandra/tar  cifs dir_mode=0755,file_mode=0755,uid=10001,username=test,password=test  0  0"
                 #echo $cpToCeph
 		#cpResult=$(eval $cpToCeph | grep ' not ' | wc -l)
                 #if [ $cpResult = 0 ]; then
